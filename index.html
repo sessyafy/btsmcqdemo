@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="JavaScript Quiz App, Quiz App, JS Quiz App, JS Developer">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <title>Bravotech Solutions Ltd | BTSMCQ Demo App</title>
+  <script>
+    function startQuiz() {
+        const fname = document.getElementById("fname").value;
+        if (fname.trim() === "") {
+            alert("Please enter your name!");
+            return;
+        }
+        localStorage.setItem("userName", fname);
+        window.location.href = "quiz.html";
+    }
+</script>
+</head>
+<body class="bg-primary">
+	<div class="container-fluid">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-secondary text-center text-white pt-5">
+                    <h1>Mini Javascript <br> BSTMCQ Demo App</h1>
+                    <p>With Count Down Timer, </p>
+                </div>
+                <div class="col-md-6 pt-3 bg-white">
+                    <br>
+                    <h3>Instructions:</h3>
+                    <ul class="list">
+                    <li>Please ente your name to beginning the examination.</li>
+                    <li>click next button for next questions, Previous for previous question and Finish button to get score.</li>
+                    <li>When timer elapses without finished the system automatically stop the examination and generate score.</li>
+                    </ul>
+                    <div class="form-group">
+                        <input id="fname" class="form-control" type="text" placeholder="Enter your name here to start Examination.">
+                    </div>
+                    <div class="form-group">
+                        <button onclick="startQuiz()" class="btn btn-primary btn-lg">Start Exam &#x2192; </button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
